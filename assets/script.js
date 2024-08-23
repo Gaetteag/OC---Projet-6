@@ -1,8 +1,6 @@
 // Ajout des écouteurs d'événement pour les flèches
 const leftArrow = document.querySelector('.arrow_left');
-
 const rightArrow = document.querySelector('.arrow_right');
-
 
 // Bannière
 const slides = [

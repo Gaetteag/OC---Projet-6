@@ -87,7 +87,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 }
-.logo{
+.logo {
 	width: 260px;
 	margin-block: 10px;
 }
@@ -128,9 +128,13 @@ header {
 }
 #banner .arrow_left {
 	left: 10px;
+	border: none;
+	background: none;
 }
 #banner .arrow_right {
 	right: 10px;
+	border: none;
+	background: none;
 }
 /* Gestion des points du carrousel */
 .dots {
@@ -180,7 +184,6 @@ header {
 	margin-bottom: 1em;
 
 }
-
 #products {
 	display: flex;
 	align-items: flex-start;
@@ -233,7 +236,6 @@ header {
 	margin-block: 0;
 	object-fit: contain;
 }
-
 .bg-lightblue{
 	background-color: #E6F4FB;
 }
@@ -243,19 +245,15 @@ header {
 #contact article, #contact div {
 	flex:1;
 }
-
-
 #contact .container {
 	flex-direction: row;
 	display: flex;
 	padding: 6em ;
 }
-
 #contact .container > div > div {
 	display: flex;
 	padding-bottom: 20px;
 }
-
 #contact h3 {
 	margin-top: 0;
 	background: url("./images/tricolor-icon.png") no-repeat left top;
@@ -287,11 +285,10 @@ footer div {
 	margin-bottom: 1em;
 	font-weight: 700;
 	font-size: 16px;
-
 }
 
 @media all and (max-width: 1250px) {
 	#contact > article {
 		flex: 2;
-	}
+		}
 }
