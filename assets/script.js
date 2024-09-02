@@ -2,7 +2,7 @@
 const leftArrow = document.querySelector('.arrow_left');
 const rightArrow = document.querySelector('.arrow_right');
 
-// Bannière
+// Eléments du carrousel
 const slides = [
     {
         "image": "./assets/images/slideshow/slide1.jpg",
@@ -21,7 +21,6 @@ const slides = [
         "tagLine": "Autocollants <span>avec découpe laser sur mesure</span>"
     }
 ];
-//console.log(slides)
 
 // Variables
 const dots = document.querySelector(".dots");
@@ -46,7 +45,6 @@ displayDots();
 // Changement au clic sur flèche droite
 function rightClick () {
     rightArrow.addEventListener("click", () => {
-        //console.log("right")
         const allDots = document.querySelectorAll(".dots .dot")
         allDots[index].classList.remove("dot_selected")
         index++
@@ -64,7 +62,6 @@ rightClick();
 // Changement au clic sur flèche gauche
 function leftClick () {
     leftArrow.addEventListener("click", () => {
-        //console.log("left")
         const allDots = document.querySelectorAll(".dots .dot")
         allDots[index].classList.remove("dot_selected")
         index--
