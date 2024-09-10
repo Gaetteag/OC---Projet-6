@@ -23,14 +23,30 @@ const slides = [
 ];
 
 // Variables
-const dots = document.querySelector(".dots");
 let index = 0;
-const bannerImage = document.querySelector(".banner-img img");
-const bannerText = document.querySelector("#banner p");
+const banner = document.getElementById("banner")
+const slider = document.querySelector(".banner-img")
+
+// Affichage de la 1ère image et texte au lancement du site
+const sliderDivision = document.createElement("div");
+sliderDivision.classList.add("banner-img");
+banner.appendChild(sliderDivision);
+banner.insertBefore(sliderDivision, banner.querySelector(".arrow"));
+const sliderImage = document.createElement("img");
+sliderImage.src = slides[index].image;
+sliderDivision.appendChild(sliderImage);
+const sliderText = document.createElement("p");
+sliderText.innerHTML = slides[index].tagLine;
+banner.appendChild(sliderText);
+banner.insertBefore(sliderText, banner.querySelector(".arrow"));
 
 // Affichage des dots
 function displayDots() {
+    const sliderDots = document.createElement("div");
+    sliderDots.classList.add("dots");
+    banner.appendChild(sliderDots);
     for (let dotNumber = 0; dotNumber < slides.length; dotNumber++) {
+        const dots = document.querySelector(".dots");
         const dot = document.createElement("div")
         dot.classList.add("dot")
         dots.appendChild(dot)
@@ -52,8 +68,8 @@ function rightClick () {
             index = 0;
         }
         allDots[index].classList.add("dot_selected")
-        bannerImage.src = slides[index].image
-        bannerText.innerHTML = slides[index].tagLine
+        sliderImage.src = slides[index].image
+        sliderText.innerHTML = slides[index].tagLine
     })
 }
 
@@ -69,8 +85,8 @@ function leftClick () {
             index = slides.length-1;
         }
         allDots[index].classList.add("dot_selected")
-        bannerImage.src = slides[index].image
-        bannerText.innerHTML = slides[index].tagLine
+        sliderImage.src = slides[index].image
+        sliderText.innerHTML = slides[index].tagLine
     })
 }
 
