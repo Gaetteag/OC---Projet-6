@@ -25,7 +25,6 @@ const slides = [
 // Variables
 let index = 0;
 const banner = document.getElementById("banner")
-const slider = document.querySelector(".banner-img")
 
 // Affichage de la 1ère image et texte au lancement du site
 const sliderDivision = document.createElement("div");
